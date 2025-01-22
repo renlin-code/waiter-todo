@@ -1,0 +1,102 @@
+[
+    {
+        "name": "Utensilios",
+        "color": "red",
+        "products": [
+            {
+                "name": "Plato"
+            },
+            {
+                "name": "Vaso"
+            },
+            {
+                "name": "Cubiertos"
+            },
+            {
+                "name": "Cuchara pequeña"
+            }
+        ]
+    },
+    {
+        "name": "Salsas",
+        "color": "green",
+        "products": [
+            {
+                "name": "Chimichurri"
+            },
+            {
+                "name": "Ají"
+            },
+            {
+                "name": "Ranch"
+            },
+            {
+                "name": "Buffalo"
+            },
+            {
+                "name": "Mayo"
+            },
+            {
+                "name": "Ketchup"
+            },
+            {
+                "name": "Rosada"
+            },
+            {
+                "name": "Mantequilla"
+            }
+        ]
+    },
+    {
+        "name": "Agregados",
+        "color": "yellow",
+        "products": [
+            {
+                "name": "Limón"
+            },
+            {
+                "name": "Sal"
+            },
+            {
+                "name": "Pimienta"
+            },
+            {
+                "name": "Azúcar"
+            },
+            {
+                "name": "Hielo"
+            },
+            {
+                "name": "Agua"
+            }
+            
+        ]
+    },
+    {
+        "name": "Desechables",
+        "color": "brown",
+        "products": [
+            {
+                "name": "Servilletas"
+            },
+            {
+                "name": "Caja para llevar"
+            },
+            {
+                "name": "Envase para llevar"
+            },
+            {
+                "name": "Vaso de niño"
+            },
+            {
+                "name": "Hielo"
+            },
+            {
+                "name": "Palillos de dientes"
+            },
+            {
+                "name": "Pitillo"
+            }
+        ]
+    }
+]
