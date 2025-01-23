@@ -11,3 +11,13 @@ export type Table = {
     number: number;
     products: Product[];
 }
+
+export type CatalogProduct = {
+    name: string;
+}
+
+export type CatalogCategory = {
+    name: string;
+    color: string;
+    products: CatalogProduct[];
+}

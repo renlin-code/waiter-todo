@@ -19,6 +19,23 @@ export function useTables() {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState<boolean>(true);
 
+    useEffect(() => {
+        fetch("/data.json").then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+            .then(jsonData => {
+                setData(jsonData);
+                setLoading(false);
+            })
+            .catch(error => {
+                console.log(error)
+                setLoading(false);
+            });
+    }, [])
+
     const storageTables = getTablesFromStorage();
     const [tables, setTables] = useState<Table[]>(storageTables);
 
@@ -33,6 +50,8 @@ export function useTables() {
             number,
             products: []
         }
+        if (tables.some((table) => table.number === number)) return
+
         updateTables([
             ...tables,
             newTable
@@ -91,28 +110,35 @@ export function useTables() {
         updateTables(tablesCopy);
     }
 
-    const resetStorage = () => {
-        updateTables([])
+    const updateProductAmountProp = (id: string, value: number) => {
+        const tablesCopy = structuredClone(tables);
+
+        tablesCopy.forEach(table => {
+            table.products.forEach(product => {
+                if (product.id === id) {
+                    product.amount = value;
+                }
+            });
+        });
+
+        updateTables(tablesCopy);
+    }
+
+    const deleteProduct = (id: string) => {
+        const newTables = tables.map(table => {
+            return {
+                ...table,
+                products: table.products.filter(product => product.id !== id)
+            };
+        });
+    
+        updateTables(newTables);
     }
 
 
-    useEffect(() => {
-        fetch("/data.json").then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-            .then(jsonData => {
-                setData(jsonData);
-                setLoading(false);
-            })
-            .catch(error => {
-                console.log(error)
-                setLoading(false);
-            });
-    }, [])
-
+    const resetStorage = () => {
+        updateTables([])
+    }
 
     return {
         data,
@@ -123,5 +149,7 @@ export function useTables() {
         addProductToTable,
         updateProductActiveProp,
         resetStorage,
+        updateProductAmountProp,
+        deleteProduct
     }
 } 

@@ -1,11 +1,17 @@
+import Catalog from "./components/Catalog";
+import Header from "./components/Header";
+import TableList from "./components/TableList";
+import { TablesProvider } from "./context/TablesProvider"
 function App() {
   return (
     <>
-      <div>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati ex quidem, quos ad quasi sequi quam minima explicabo aliquid vitae! Velit ex quae iste ad voluptate dignissimos saepe tenetur voluptatem?
-      </div>
+      <TablesProvider>
+        <Header />
+        <TableList />
+        <Catalog />
+      </TablesProvider>
     </>
   )
 }
 
-export default App
+export default App;

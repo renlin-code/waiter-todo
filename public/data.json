@@ -7,6 +7,12 @@
                 "name": "Plato"
             },
             {
+                "name": "Plato de sopa"
+            },
+            {
+                "name": "Plato pequeño"
+            },
+            {
                 "name": "Vaso"
             },
             {
@@ -44,6 +50,9 @@
             },
             {
                 "name": "Mantequilla"
+            },
+            {
+                "name": "Tabasco"
             }
         ]
     },
