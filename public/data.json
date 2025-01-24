@@ -1,7 +1,7 @@
 [
     {
         "name": "Utensilios",
-        "color": "red",
+        "color": "#40BD00",
         "products": [
             {
                 "name": "Plato"
@@ -25,7 +25,7 @@
     },
     {
         "name": "Salsas",
-        "color": "green",
+        "color": "#EAB100",
         "products": [
             {
                 "name": "Chimichurri"
@@ -58,7 +58,7 @@
     },
     {
         "name": "Agregados",
-        "color": "yellow",
+        "color": "#F93424",
         "products": [
             {
                 "name": "Limón"
@@ -83,7 +83,7 @@
     },
     {
         "name": "Desechables",
-        "color": "brown",
+        "color": "#A155F6",
         "products": [
             {
                 "name": "Servilletas"

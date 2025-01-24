@@ -1,35 +1,32 @@
-/* 1. Use a more-intuitive box-sizing model */
+/* RESET */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margin */
 * {
   margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
 }
 
 body {
-  /* 3. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
 
-/* 4. Improve media defaults */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
 
-/* 5. Inherit fonts for form controls */
 input, button, textarea, select {
   font: inherit;
 }
 
-/* 6. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, button {
   overflow-wrap: break-word;
 }
 
-/* 7. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
@@ -37,9 +34,95 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-/*
-  8. Create a root stacking context
-*/
 #root, #__next {
   isolation: isolate;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* FONTS */
+@font-face {
+  font-family: 'Roboto';
+  src: url("./assets/fonts/Roboto-Light.ttf") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("./assets/fonts/Roboto-Regular.ttf") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("./assets/fonts/Roboto-Medium.ttf") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+/* VARS */
+html {
+  --color-dark-gray: #848a90;
+  --color-gray: #BAC3CC;
+  --color-light-gray: #CFD8DF;
+  --color-very-light-gray: #D7E2E8;
+  --color-black: #252829;
+  --color-white: #F4F4F4;
+  --color-blue: #0032E5;
+}
+
+/* GLOBAL */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+body, input, button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 17px;
+  color: var(--color-black);
+}
+
+.input {
+  width: 100%;
+  outline: none;
+  background: var(--color-very-light-gray);
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 24px;
+}
+
+.button:disabled {
+  background: var(--color-light-gray);
+  border-color: var(--color-light-gray);
+  color: var(--color-dark-gray);
+}
+
+.button--sm {
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+}
+
+.button--bg {
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+}
+
+.button--primary {
+  background: var(--color-blue);
+  color: var(--color-white);
+}
+.button--secondary {
+  background: transparent;
+  color: var(--color-black);
+  border: 1px solid var(--color-blue);
+}
+
+.button--tertiary {
+  background: var(--color-gray);
 }

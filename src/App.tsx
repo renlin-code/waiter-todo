@@ -1,14 +1,18 @@
-import Catalog from "./components/Catalog";
-import Header from "./components/Header";
-import TableList from "./components/TableList";
+import Catalog from "./components/catalog/Catalog";
+import Header from "./components/header/Header";
+import TableList from "./components/list/TableList";
 import { TablesProvider } from "./context/TablesProvider"
+import "./App.css"
+
 function App() {
   return (
     <>
       <TablesProvider>
-        <Header />
-        <TableList />
-        <Catalog />
+        <div className="app-wrapper">
+          <Header />
+          <TableList />
+          <Catalog />
+        </div>
       </TablesProvider>
     </>
   )
