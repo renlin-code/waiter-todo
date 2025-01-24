@@ -11,7 +11,7 @@ function ModalAddTable({ close }: ModalAddTableProps) {
     const { addNewTable, setActiveTable, tables } = useContext(tablesContext);
     const [tableNumber, setTableNumber] = useState<number | string>("");
     const [valid, setValid] = useState(false);
-    const inputRef = useRef(null)
+    const inputRef = useRef<HTMLInputElement>(null)
 
     useEffect(() => {
         if (inputRef.current) {

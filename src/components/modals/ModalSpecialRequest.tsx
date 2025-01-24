@@ -12,7 +12,7 @@ function ModalSpecialRequest({ close }: ModalSpecialRequestProps) {
     const [text, setText] = useState<string>("");
     const [valid, setValid] = useState(false);
 
-    const inputRef = useRef(null)
+    const inputRef = useRef<HTMLInputElement>(null)
     const tableId = tables[activeTable].id
 
     useEffect(() => {
